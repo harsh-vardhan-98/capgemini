@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        <bean id="bankAccount" class="com.assignment.assignment.BankAccount">
+        	<property name="accountid" value="11802445"></property>
+        	<property name="holderName" value="Harsh Vardhan"></property>
+        	<property name="typeOfAccount" value="Saving"></property>
+        	<property name="balance" value="100000"></property>        	
+        </bean>
+        
+        <bean id="bankaccountrepositoryimpl" class="com.assignment.assignment.BankAccountRepositoryImpl">
+        	<constructor-arg  name="bankaccount" ref="bankAccount"></constructor-arg>
+   
+        </bean>
+        
+        <bean id="bankaccountserviceimpl" class="com.assignment.assignment.BankAccountServiceImpl">
+         	<constructor-arg name="bankAccountRepositoryImpl" ref="bankaccountrepositoryimpl"></constructor-arg>
+        </bean>
+        
+        <bean id="bankaccountcontroller" class="com.assignment.assignment.BankAccountcontroller">
+        	<constructor-arg  name="bankAccountServiceImpl" ref="bankaccountserviceimpl"></constructor-arg>
+        </bean>
+        
+  </beans>
