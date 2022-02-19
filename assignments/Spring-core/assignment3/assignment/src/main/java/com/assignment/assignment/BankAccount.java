@@ -4,7 +4,7 @@ public class BankAccount {
 		private long accountid;
 		private String holderName;
 		private String typeOfAccount;
-		private double balance ;
+		private double balance  ;
 		
 		
 		public long getAccountid() {

@@ -21,6 +21,7 @@
         </bean>
         
         <bean id="bankaccountserviceimpl" class="com.assignment.assignment.BankAccountServiceImpl">
+         	
          	<constructor-arg name="bankAccountRepositoryImpl" ref="bankaccountrepositoryimpl"></constructor-arg>
         </bean>
         
