@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style20.css">
+     <title>Document</title>
+</head>
+<body>
+     
+     <div id="pizza-form">
+          <form >
+               <div id="user-detail"></div>
+               <label for="name">Enter your Name: </label>
+               <input type="text" id="name" placeholder="Username"><br>
+               <label for="email">Enter your Email: </label>
+               <input type="email" id="email" placeholder="Email">
+               <div id="check">
+                    <h2>Topping</h2>
+                    <div class="box">
+                         <label for="pepporani">Pepporani</label>
+                         <input type="checkbox" id="pepporani" name="Topping" class="checkbox">
+                    </div>
+                    <div class="box">
+                         <label for="Extra-Chesse">Extra Chesse</label>
+                         <input type="checkbox" id="Extra-Chesse" name="Topping" class="checkbox">
+                    </div>
+                    <div class="box">
+                         <label for="olives">olives</label>
+                         <input type="checkbox" id="olives" name="Topping" class="checkbox">    
+                    </div>
+                    <div class="box">
+                         <label for="Pepper">Pepper</label>
+                         <input type="checkbox" id="Pepper" name="Topping" class="checkbox">
+                    </div>
+                  
+               </div>
+               <div id="delivery">
+                    <h2>How do you want your pizza: </h2>
+                    <div class="delivery-box">
+
+                         <label for="home-delivery">Home Delivery</label>
+                         <input type="radio" id="home-delivery" value="Home Delivery" name="delivery-opt" class="delivery-check">
+                    </div>
+                    <div class="delivery-box">
+                         <label for="pick-up">Pick-Up</label>
+                         <input type="radio" id="pick-up" value="Pick-Up" name="delivery-opt" class="delivery-check">
+                         
+                    </div>
+               </div>
+               <hr>
+               <div id="add-form">
+                    <label for="address">Address</label><br>
+                    <textarea name="address" id="address"  cols="60" rows="10"></textarea>
+               </div>
+               <button type="submit">submit</button>
+               <button type="reset">Reset</button>
+               <button type="button" onclick="display()">Show summary </button>
+          </form>
+          <div id="order-summary">
+               <table id = "tbl">
+                    <thead>
+                         <th>Customer Name</th>
+                         <th>Customer Email</th>
+                         <th>Toping Selected</th>
+                         <th>Delivery Option</th>
+                         <th>Address</th>
+                         <th>price</th>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+               </table>
+          </div>
+
+     </div>
+     <script src="app20.js"></script>
+</body>
+</html>
