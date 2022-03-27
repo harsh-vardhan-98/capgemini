@@ -1,0 +1,39 @@
+#navbar{
+    
+     width: 80vw;
+     margin: 30px auto;
+     background-color: rgb(91, 146, 228);
+     
+     
+     
+
+     ul{
+          width: 100%;
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          justify-content:space-between;
+          align-items: center;
+          margin: 0px;
+          padding: 0px;
+          
+          li{
+               width: 20vw;
+               padding: 10px 20px;
+               font-size: 1.3rem;
+
+
+               &:active{
+                    background-color: pink;
+               }
+               
+
+               .link{
+                    text-decoration: none;
+                    color: black;
+               }
+
+          }
+     }
+
+}
